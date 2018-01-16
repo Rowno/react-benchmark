@@ -18,15 +18,27 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "eslint-config-prettier": "^2.9.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
+    "prettier": "^1.10.2",
     "xo": "^0.18.2"
   },
   "xo": {
+    "extends": ["prettier"],
     "space": true,
-    "semicolon": false
+    "semicolon": false,
+    "envs": ["node", "browser"],
+    "rules": {
+      "indent": ["off"]
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   },
   "lint-staged": {
-    "*.js": ["xo --fix", "git add"]
+    "*.js": ["xo --fix", "prettier --write", "git add"],
+    "*.{json,md}": ["prettier --write", "git add"]
   }
 }
