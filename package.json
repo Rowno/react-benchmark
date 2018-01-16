@@ -27,6 +27,7 @@
     "benchmark": "^2.1.4",
     "cp-file": "^5.0.0",
     "express": "^4.16.2",
+    "get-port": "^3.2.0",
     "humanize-number": "^0.0.2",
     "lodash": "^4.17.4",
     "meow": "^4.0.0",
