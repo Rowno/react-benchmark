@@ -1,0 +1,32 @@
+{
+  "name": "react-benchmark",
+  "version": "0.0.0",
+  "description": "Benchmarks the render performance of React components.",
+  "author": "Roland Warmerdam (https://roland.codes)",
+  "keywords": [],
+  "repository": "Rowno/react-benchmark",
+  "license": "ISC",
+  "private": true,
+  "main": "lib/index.js",
+  "files": ["lib"],
+  "scripts": {
+    "test": "xo",
+    "precommit": "lint-staged"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false
+  },
+  "lint-staged": {
+    "*.js": ["xo --fix", "git add"]
+  }
+}
