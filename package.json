@@ -10,7 +10,7 @@
   "bin": {
     "react-benchmark": "./lib/cli.js"
   },
-  "files": ["lib"],
+  "files": ["lib", ".babelrc"],
   "scripts": {
     "test": "xo",
     "precommit": "lint-staged"
