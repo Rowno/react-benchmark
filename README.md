@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/Rowno/react-benchmark.svg?branch=master)](https://travis-ci.org/Rowno/react-benchmark)
 [![Dependency Status](https://david-dm.org/Rowno/react-benchmark/status.svg)](https://david-dm.org/Rowno/react-benchmark)
 
+![Demo](demo.gif)
+
 A tool for benchmarking the render performance of React components.
 
 It compiles the benchmark code into a minified production bundle using Webpack and then runs it in headless Chrome to benchmark the real production code in a real production environment.
