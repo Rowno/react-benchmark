@@ -1,6 +1,6 @@
 {
   "name": "react-benchmark",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description":
     "A tool for benchmarking the render performance of React components.",
   "author": "Roland Warmerdam (https://roland.codes)",
