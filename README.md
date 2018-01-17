@@ -43,7 +43,7 @@ export default function() {
 }
 ```
 
-You can import anything that Webpack supports out of the box and your code will be transpiled with Babel using the `env`, `stage-0` and `react` presets.
+You can import anything that Webpack supports out of the box and your code will be transpiled with Babel using your local Babel config.
 
 ## License
 
