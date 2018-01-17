@@ -26,9 +26,11 @@ Usage
   $ react-benchmark <path>
 
 Options
-  <path>     Path to a JavaScript file that exports the function to be benchmarked.
-  --version  Prints the package version.
-  --help     Prints this message.
+  <path>          Path to a JavaScript file that exports the function to be benchmarked.
+  --debug, -d     Run a development build instead of a production build to aid debugging.
+  --devtools, -t  Run Chrome in windowed mode with the devtools open.
+  --version       Prints the version.
+  --help          Prints this message.
 
 Examples
   $ react-benchmark benchmark.js
