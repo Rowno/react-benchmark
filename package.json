@@ -4,7 +4,7 @@
   "description":
     "A tool for benchmarking the render performance of React components.",
   "author": "Roland Warmerdam (https://roland.codes)",
-  "keywords": [],
+  "keywords": ["react", "benchmark", "chrome", "webpack", "production"],
   "repository": "Rowno/react-benchmark",
   "license": "ISC",
   "private": true,
