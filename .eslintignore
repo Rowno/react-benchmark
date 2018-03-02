@@ -1,0 +1,2 @@
+# Workaround XO not resolving the default ignore paths correctly when used with lint-staged
+/test/fixtures/*
