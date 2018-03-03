@@ -39,7 +39,7 @@
     "humanize-number": "^0.0.2",
     "lodash": "^4.17.5",
     "meow": "^4.0.0",
-    "ora": "^1.3.0",
+    "ora": "^2.0.0",
     "pluralize": "^7.0.0",
     "puppeteer": "^1.1.1",
     "react": "^16.2.0",
