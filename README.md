@@ -120,7 +120,7 @@ Fired every time a benchmark cycle has been completed. Gets passed a [Benchmark]
 
 #### console
 
-Fired every time something is logged to Chrome՚s console.
+Fired every time something is logged to Chrome՚s console. Gets passed a `{type, text}` object.
 
 ## License
 
