@@ -29,7 +29,7 @@ test('runs benchmark', async t => {
   reactBenchmark.on('console', log => {
     t.deepEqual(log, {
       type: 'warning',
-      text: 'log message',
+      text: 'log message'
     })
   })
 
