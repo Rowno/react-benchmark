@@ -1,5 +1,5 @@
 import test from 'ava'
-import {formatBenchmark} from '../lib/utils'
+import formatBenchmark from '../lib/format-benchmark'
 
 test('formats a benchmark', t => {
   const fixture = {
