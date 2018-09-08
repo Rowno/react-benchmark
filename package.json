@@ -17,8 +17,7 @@
     "react-benchmark": "./lib/cli.js"
   },
   "files": [
-    "lib",
-    ".babelrc"
+    "lib"
   ],
   "scripts": {
     "test": "xo && ava",
@@ -28,8 +27,6 @@
     "node": ">=8"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.2",
     "benchmark": "^2.1.4",
     "express": "^4.16.3",
@@ -40,6 +37,7 @@
     "lodash": "^4.17.10",
     "meow": "^5.0.0",
     "ora": "^3.0.0",
+    "pkg-dir": "^3.0.0",
     "pluralize": "^7.0.0",
     "puppeteer": "^1.7.0",
     "react": "^16.5.0",
@@ -50,6 +48,8 @@
     "webpack": "^4.17.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "ava": "^0.25.0",
     "execa": "^1.0.0",
