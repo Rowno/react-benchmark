@@ -1,3 +1,4 @@
+sudo: true # Puppeteer doesn't work in the container based builds
 language: node_js
 node_js:
   - "8"
