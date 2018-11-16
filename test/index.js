@@ -38,3 +38,9 @@ test('runs benchmark', async t => {
   t.truthy(result.times)
   t.truthy(result.hz)
 })
+
+test('supports jsx', async t => {
+  const reactBenchmark = new ReactBenchmark()
+  const result = await reactBenchmark.run('test/fixtures/benchmark.jsx')
+  t.truthy(result.stats)
+})
