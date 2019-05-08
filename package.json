@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "benchmark": "^2.1.4",
     "express": "^4.16.4",
@@ -48,8 +50,6 @@
     "webpack": "^4.25.1"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.1.6",
-    "@babel/preset-react": "^7.0.0",
     "ava": "^0.25.0",
     "execa": "^1.0.0",
     "husky": "^1.1.4",
