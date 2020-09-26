@@ -104,7 +104,7 @@
     "singleQuote": true
   },
   "ava": {
-    "timeout": "20s"
+    "concurrency": 2
   },
   "husky": {
     "hooks": {
