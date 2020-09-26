@@ -1,6 +1,6 @@
-import path from 'path'
-import test from 'ava'
-import execa from 'execa'
+const path = require('path')
+const test = require('ava')
+const execa = require('execa')
 
 test('runs benchmark', async (t) => {
   const binPath = path.resolve(__dirname, '../lib/cli.js')

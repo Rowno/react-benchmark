@@ -1,5 +1,5 @@
-import test from 'ava'
-import ReactBenchmark from '..'
+const test = require('ava')
+const ReactBenchmark = require('..')
 
 test('runs benchmark', async (t) => {
   t.plan(10)
