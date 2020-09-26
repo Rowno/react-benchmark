@@ -24,7 +24,7 @@
     "lint": "eslint '**/*.{js,jsx}'"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
