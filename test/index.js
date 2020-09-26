@@ -44,3 +44,9 @@ test('supports jsx', async (t) => {
   const result = await reactBenchmark.run('test/fixtures/benchmark.jsx')
   t.truthy(result.stats)
 })
+
+test('supports typescript', async (t) => {
+  const reactBenchmark = new ReactBenchmark()
+  const result = await reactBenchmark.run('test/fixtures/benchmark.tsx')
+  t.truthy(result.stats)
+})

@@ -26,7 +26,7 @@ Usage
   $ react-benchmark <path>
 
 Options
-  <path>          Path to a JavaScript file that exports the function to be benchmarked.
+  <path>          Path to a JavaScript or TypeScript file that exports the function to be benchmarked.
   --debug, -d     Run a development build instead of a production build to aid debugging.
   --devtools, -t  Run Chrome in windowed mode with the devtools open.
   --version       Prints the version.
@@ -47,7 +47,7 @@ export default function () {
 }
 ```
 
-You can import anything that Webpack supports out of the box and your code will be transpiled with Babel using your local Babel config.
+You can import anything that Webpack supports out of the box and your code will be transpiled with Babel using your local Babel config. TypeScript files are also supported out of the box.
 
 ## API
 
@@ -79,6 +79,7 @@ Path to the benchmark file to run. See the [Usage](#usage) section for more deta
 #### options
 
 Type: `Object`
+Default: `{ debug: false, devtools: false }`
 
 Optional object containing additional options.
 
