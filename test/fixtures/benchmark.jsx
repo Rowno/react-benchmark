@@ -3,6 +3,6 @@ import Test from './test'
 
 console.warn('log message')
 
-export default function() {
+export default function Benchmark() {
   return <Test />
 }

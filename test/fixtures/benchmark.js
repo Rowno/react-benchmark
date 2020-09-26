@@ -2,6 +2,6 @@ import React from 'react'
 
 console.warn('log message')
 
-export default function() {
+export default function Benchmark() {
   return <div>Test</div>
 }

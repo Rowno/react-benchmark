@@ -1,7 +1,7 @@
 import test from 'ava'
 import ReactBenchmark from '..'
 
-test('runs benchmark', async t => {
+test('runs benchmark', async (t) => {
   t.plan(10)
 
   let hasProgressed = false
@@ -19,17 +19,17 @@ test('runs benchmark', async t => {
   reactBenchmark.on('start', () => {
     t.pass('start event')
   })
-  reactBenchmark.on('progress', benchmark => {
+  reactBenchmark.on('progress', (benchmark) => {
     if (!hasProgressed) {
       hasProgressed = true
       t.truthy(benchmark.stats)
       t.truthy(benchmark.times)
     }
   })
-  reactBenchmark.on('console', log => {
+  reactBenchmark.on('console', (log) => {
     t.deepEqual(log, {
       type: 'warning',
-      text: 'log message'
+      text: 'log message',
     })
   })
 
@@ -39,7 +39,7 @@ test('runs benchmark', async t => {
   t.truthy(result.hz)
 })
 
-test('supports jsx', async t => {
+test('supports jsx', async (t) => {
   const reactBenchmark = new ReactBenchmark()
   const result = await reactBenchmark.run('test/fixtures/benchmark.jsx')
   t.truthy(result.stats)

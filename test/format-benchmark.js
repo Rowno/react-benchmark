@@ -1,7 +1,7 @@
 import test from 'ava'
 import formatBenchmark from '../lib/format-benchmark'
 
-test('formats a benchmark', t => {
+test('formats a benchmark', (t) => {
   const fixture = {
     stats: {
       moe: 0.0000051306487763758425,
@@ -19,22 +19,22 @@ test('formats a benchmark', t => {
         0.00016414686825053996,
         0.00016846652267818574,
         0.00016149068322981365,
-        0.00016356107660455487
+        0.00016356107660455487,
       ],
-      variance: 3.768730809191435e-10
+      variance: 3.768730809191435e-10,
     },
     times: {
       cycle: 0.08247380945654903,
       elapsed: 6.256,
       period: 0.00016363851082648617,
-      timeStamp: 1517610881510
+      timeStamp: 1517610881510,
     },
-    hz: 6111.030923890211
+    hz: 6111.030923890211,
   }
   t.is(formatBenchmark(fixture), '6,111 ops/sec ±3.14% (10 runs sampled)')
 })
 
-test('handles a null hz', t => {
+test('handles a null hz', (t) => {
   const fixture = {
     stats: {
       moe: 0.0000051306487763758425,
@@ -52,17 +52,17 @@ test('handles a null hz', t => {
         0.00016414686825053996,
         0.00016846652267818574,
         0.00016149068322981365,
-        0.00016356107660455487
+        0.00016356107660455487,
       ],
-      variance: 3.768730809191435e-10
+      variance: 3.768730809191435e-10,
     },
     times: {
       cycle: 0.08247380945654903,
       elapsed: 6.256,
       period: 0.00016363851082648617,
-      timeStamp: 1517610881510
+      timeStamp: 1517610881510,
     },
-    hz: null
+    hz: null,
   }
   t.is(formatBenchmark(fixture), '0 ops/sec ±3.14% (10 runs sampled)')
 })

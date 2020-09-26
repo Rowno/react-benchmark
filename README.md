@@ -42,7 +42,7 @@ The `<path>` file should export a function that returns the component instance y
 import React from 'react'
 import Component from './src'
 
-export default function() {
+export default function () {
   return <Component hello="world" />
 }
 ```
@@ -57,7 +57,7 @@ You can import anything that Webpack supports out of the box and your code will 
 const ReactBenchmark = require('react-benchmark')
 const reactBenchmark = new ReactBenchmark()
 
-reactBenchmark.on('progress', currentStats => {
+reactBenchmark.on('progress', (currentStats) => {
   console.log(currentStats)
 })
 

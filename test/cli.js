@@ -2,7 +2,7 @@ import path from 'path'
 import test from 'ava'
 import execa from 'execa'
 
-test('runs benchmark', async t => {
+test('runs benchmark', async (t) => {
   const binPath = path.resolve(__dirname, '../lib/cli.js')
   const fixturePath = path.resolve(__dirname, 'fixtures/benchmark.js')
 
