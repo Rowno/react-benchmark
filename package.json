@@ -103,6 +103,9 @@
     "semi": false,
     "singleQuote": true
   },
+  "ava": {
+    "timeout": "20s"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
