@@ -26,7 +26,7 @@
     "prepare": "husky install"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "dependencies": {
     "@babel/core": "^7.13.8",
