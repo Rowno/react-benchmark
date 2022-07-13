@@ -17,6 +17,11 @@ export interface RunOptions {
    * @default false
    */
   devtools?: boolean
+  /**
+   * Run Chrome with CPU throttled X times. Useful to receive more precise results between runs.
+   * @default 1
+   */
+  cpuThrottle?: number
 }
 
 export default class ReactBenchmark extends EventEmitter {

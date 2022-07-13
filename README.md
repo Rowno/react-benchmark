@@ -26,6 +26,7 @@ Options
   <path>          Path to a JavaScript or TypeScript file that exports the function to be benchmarked.
   --debug, -d     Run a development build instead of a production build to aid debugging.
   --devtools, -t  Run Chrome in windowed mode with the devtools open.
+  --cpuThrottle=X Run Chrome with CPU throttled X times.
   --version       Prints the version.
   --help          Prints this message.
 
@@ -76,7 +77,7 @@ Path to the benchmark file to run. See the [Usage](#usage) section for more deta
 #### options
 
 Type: `Object`
-Default: `{ debug: false, devtools: false }`
+Default: `{ debug: false, devtools: false, cpuThrottle: 1 }`
 
 Optional object containing additional options.
 
@@ -93,6 +94,13 @@ Type: `Boolean`<br>
 Default: `false`
 
 Run Chrome in windowed mode with the devtools open.
+
+##### cpuThrottle
+
+Type: `number`<br>
+Default: `1`
+
+Run Chrome with CPU throttled X times. Useful to receive more precise results between runs.
 
 ### Events
 
