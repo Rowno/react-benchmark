@@ -2,8 +2,6 @@ const path = require('path')
 const test = require('ava')
 const execa = require('execa')
 
-const sleep = (ms) => new Promise((res) => setTimeout(res, ms))
-
 test('runs benchmark', async (t) => {
   const binPath = path.resolve(__dirname, '../lib/cli.js')
   const fixturePath = path.resolve(__dirname, 'fixtures/benchmark.js')
