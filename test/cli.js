@@ -8,7 +8,7 @@ test('runs benchmark', async (t) => {
 
   const result = await execa(binPath, [fixturePath])
 
-  t.regex(result.stdout, /[0-9,]+ ops\/sec ±[0-9.]+% \(\d+ runs sampled\)/)
+  t.regex(result.stdout, /\d+ runs sampled: [0-9,]+ ops\/sec ±[0-9.]+%/)
 })
 
 test('throttles CPU', async (t) => {
@@ -26,5 +26,17 @@ test('throttles CPU', async (t) => {
   t.assert(
     getOpsSec(withT) < getOpsSec(woutT),
     'The difference between throttled and not throttled execution is less then normal'
+  )
+})
+
+test('measures RAM', async (t) => {
+  const binPath = path.resolve(__dirname, '../lib/cli.js')
+  const fixturePath = path.resolve(__dirname, 'fixtures/benchmark.js')
+
+  const result = await execa(binPath, [fixturePath, '-r'])
+
+  t.regex(
+    result.stdout,
+    /\d+ runs sampled: [0-9,]+ ops\/sec ±[0-9.]+% \/ RAM: [0-9]+ MB ±[0-9.]+% \/ Objects: [0-9]+ ±[0-9.]+%/
   )
 })

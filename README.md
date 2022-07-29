@@ -27,6 +27,7 @@ Options
   --debug, -d     Run a development build instead of a production build to aid debugging.
   --devtools, -t  Run Chrome in windowed mode with the devtools open.
   --cpuThrottle=X Run Chrome with CPU throttled X times.
+  --ram, -r       Also measures RAM consumption.
   --version       Prints the version.
   --help          Prints this message.
 
@@ -77,7 +78,7 @@ Path to the benchmark file to run. See the [Usage](#usage) section for more deta
 #### options
 
 Type: `Object`
-Default: `{ debug: false, devtools: false, cpuThrottle: 1 }`
+Default: `{ debug: false, devtools: false, cpuThrottle: 1, isRamMeasured: false }`
 
 Optional object containing additional options.
 
@@ -101,6 +102,16 @@ Type: `number`<br>
 Default: `1`
 
 Run Chrome with CPU throttled X times. Useful to receive more precise results between runs.
+
+##### isRamMeasured
+
+Type: `boolean`<br>
+Default: `false`
+
+If `true` RAM measurement is enabled. In this case, 2 metrics are being recorded between the runs:
+
+- Heap size (`JSHeapUsedSize`) represents how much RAM was consumed at the end of a test iteration.
+- `Object.prototype` represents how many objects were created in RAM at the end of a test iteration. **Why is it interesting?** JS engine sometimes optimizes a code in different ways which in turn changes its memory footprint. [source / look at the "Counting all the objects" section](https://media-codings.com/articles/automatically-detect-memory-leaks-with-puppeteer)
 
 ### Events
 

@@ -33,7 +33,7 @@ test('runs benchmark', async (t) => {
     })
   })
 
-  const result = await reactBenchmark.run('test/fixtures/benchmark.js')
+  const [result] = await reactBenchmark.run('test/fixtures/benchmark.js')
   t.truthy(result.stats)
   t.truthy(result.times)
   t.truthy(result.hz)
@@ -41,12 +41,12 @@ test('runs benchmark', async (t) => {
 
 test('supports jsx', async (t) => {
   const reactBenchmark = new ReactBenchmark()
-  const result = await reactBenchmark.run('test/fixtures/benchmark.jsx')
+  const [result] = await reactBenchmark.run('test/fixtures/benchmark.jsx')
   t.truthy(result.stats)
 })
 
 test('supports typescript', async (t) => {
   const reactBenchmark = new ReactBenchmark()
-  const result = await reactBenchmark.run('test/fixtures/benchmark.tsx')
+  const [result] = await reactBenchmark.run('test/fixtures/benchmark.tsx')
   t.truthy(result.stats)
 })
