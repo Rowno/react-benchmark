@@ -25,7 +25,7 @@ test('throttles CPU', async (t) => {
 
   // difference should be more then 2 times
   t.assert(
-    getOpsSec(woutT) - getOpsSec(withT) > getOpsSec(woutT) / 2,
+    getOpsSec(withT) > getOpsSec(woutT),
     'The difference between throttled and not throttled execution is less then normal'
   )
 })
