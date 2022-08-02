@@ -23,9 +23,8 @@ test('throttles CPU', async (t) => {
   const woutT = (await execa(binPath, [fixturePath])).stdout
   const withT = (await execa(binPath, [fixturePath, '--cpuThrottle=4'])).stdout
 
-  // difference should be more then 2 times
   t.assert(
-    getOpsSec(woutT) - getOpsSec(withT) > getOpsSec(woutT) / 2,
+    getOpsSec(withT) < getOpsSec(woutT),
     'The difference between throttled and not throttled execution is less then normal'
   )
 })
