@@ -22,6 +22,13 @@ export interface RunOptions {
    * @default 1
    */
   cpuThrottle?: number
+  /**
+   * If `true` RAM measurement is enabled. In this case, 2 metrics are being recorded between the runs:
+   * - Heap size (`JSHeapUsedSize`) represents how much RAM was consumed at the end of a test iteration.
+   * - `Object.prototype` represents how many objects were created in RAM at the end of a test iteration.
+   * @default false
+   */
+  isRamMeasured?: boolean
 }
 
 export default class ReactBenchmark extends EventEmitter {
