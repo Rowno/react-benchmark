@@ -26,6 +26,7 @@ Options
   <path>          Path to a JavaScript or TypeScript file that exports the function to be benchmarked.
   --debug, -d     Run a development build instead of a production build to aid debugging.
   --devtools, -t  Run Chrome in windowed mode with the devtools open.
+  --onReady Measure time not until the first render, but until `onReady` callback is not invoked from the component.
   --cpuThrottle=X Run Chrome with CPU throttled X times.
   --version       Prints the version.
   --help          Prints this message.
@@ -77,7 +78,7 @@ Path to the benchmark file to run. See the [Usage](#usage) section for more deta
 #### options
 
 Type: `Object`
-Default: `{ debug: false, devtools: false, cpuThrottle: 1 }`
+Default: `{ debug: false, devtools: false, cpuThrottle: 1, onReady: false }`
 
 Optional object containing additional options.
 
@@ -94,6 +95,24 @@ Type: `Boolean`<br>
 Default: `false`
 
 Run Chrome in windowed mode with the devtools open.
+
+##### onReady
+
+Type: `boolean`<br>
+Default: `false`
+
+Measure time not until the first render, but until `onReady` callback is not invoked from the component. Useful when you have something happening inside your component after the initial render. If enabled, a special `onReady` function is passed to the component as a prop, which can be called after the component has done all the initial tasks, for example:
+
+```tsx
+// Your component
+
+const FooComponent = ({ onReady }) => {
+  useEffect(() => {
+    doSomeHeavyCalculations().finally(() => onReady())
+  }, [])
+  return ()
+}
+```
 
 ##### cpuThrottle
 
