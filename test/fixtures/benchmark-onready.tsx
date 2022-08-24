@@ -8,7 +8,7 @@ const BenchmarkOnReady: React.FC<BenchmarkProps> = ({ onReady }) => {
   if (!onReady) {
     throw new Error('onReady has not been passed from react-benchmark')
   }
-  const NODES_COUNT = 10
+  const NODES_COUNT = 2
   const [nodes, setNodes] = useState<React.ReactNode[]>([])
   const getNodes = (numberOfNodes: number, page: number) => {
     const newNodes: React.ReactNode[] = []
@@ -38,7 +38,7 @@ const BenchmarkOnReady: React.FC<BenchmarkProps> = ({ onReady }) => {
   }
 
   useEffect(() => {
-    addDefferedNodes(NODES_COUNT, 1, 50)
+    addDefferedNodes(NODES_COUNT, 1, 10)
   })
   useEffect(() => {
     if (nodes.length === NODES_COUNT) {
