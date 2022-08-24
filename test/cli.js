@@ -28,3 +28,12 @@ test('throttles CPU', async (t) => {
     'The difference between throttled and not throttled execution is less then normal'
   )
 })
+
+test('uses onReady cb when --onReady flag is passed', async (t) => {
+  const binPath = path.resolve(__dirname, '../lib/cli.js')
+  const fixturePath = path.resolve(__dirname, 'fixtures/benchmark-onready.tsx')
+
+  const result = await execa(binPath, [fixturePath])
+
+  t.regex(result.stdout, /[0-9,]+ ops\/sec ±[0-9.]+% \(\d+ runs sampled\)/)
+})

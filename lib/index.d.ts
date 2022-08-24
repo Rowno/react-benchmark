@@ -21,7 +21,12 @@ export interface RunOptions {
    * Run Chrome with CPU throttled X times. Useful to receive more precise results between runs.
    * @default 1
    */
-  cpuThrottle?: number
+  cpuThrottle?: number,
+  /**
+   * Measure time not until the first render, but until onReady callback is not invoked from the component.
+   * @default false
+   */
+  onReady?: boolean,
 }
 
 export default class ReactBenchmark extends EventEmitter {
