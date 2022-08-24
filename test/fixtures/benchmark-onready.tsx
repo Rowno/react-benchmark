@@ -38,11 +38,10 @@ const BenchmarkOnReady: React.FC<BenchmarkProps> = ({ onReady }) => {
   }
 
   useEffect(() => {
-    addDefferedNodes(NODES_COUNT, 1, 900)
-    addDefferedNodes(NODES_COUNT, 0, 1000)
+    addDefferedNodes(NODES_COUNT, 1, 50)
   })
   useEffect(() => {
-    if (nodes.length === NODES_COUNT * 2) {
+    if (nodes.length === NODES_COUNT) {
       onReady()
     }
   }, [nodes, onReady])
