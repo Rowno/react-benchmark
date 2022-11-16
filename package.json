@@ -21,7 +21,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "yarn lint && ava",
+    "test": "yarn lint && NODE_ENV=production ava --timeout=2m",
     "lint": "eslint '**/*.{js,jsx}'",
     "prepare": "husky install"
   },

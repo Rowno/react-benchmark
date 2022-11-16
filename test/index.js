@@ -27,6 +27,9 @@ test('runs benchmark', async (t) => {
     }
   })
   reactBenchmark.on('console', (log) => {
+    if (log.type !== 'warning') {
+      return
+    }
     t.deepEqual(log, {
       type: 'warning',
       text: 'log message',

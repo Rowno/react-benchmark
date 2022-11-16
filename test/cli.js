@@ -21,7 +21,7 @@ test('throttles CPU', async (t) => {
   const fixturePath = path.resolve(__dirname, 'fixtures/benchmark.js')
 
   const woutT = (await execa(binPath, [fixturePath])).stdout
-  const withT = (await execa(binPath, [fixturePath, '--cpuThrottle=4'])).stdout
+  const withT = (await execa(binPath, [fixturePath, '--cpuThrottle=2'])).stdout
 
   t.assert(
     getOpsSec(withT) < getOpsSec(woutT),
