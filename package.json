@@ -45,15 +45,14 @@
     "pkg-dir": "^5.0.0",
     "pluralize": "^8.0.0",
     "puppeteer": "^13.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "resolve-from": "^5.0.0",
     "source-map-loader": "^3.0.1",
     "source-map-support": "^0.5.19",
     "tempy": "^1.0.0",
     "ts-loader": "^9.2.6",
-    "typescript": "^4.0.3",
-    "webpack": "^5.24.2"
+    "typescript": "^4.0.3"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.5",
@@ -66,6 +65,7 @@
     "eslint-plugin-react": "^7.22.0",
     "execa": "^5.0.0",
     "husky": "^8.0.1",
+    "json-loader": "^0.5.7",
     "lint-staged": "^13.0.3",
     "prettier": "^2.2.1"
   },
